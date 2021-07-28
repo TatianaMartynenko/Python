@@ -1,0 +1,43 @@
+# задание 1
+name=input('Введите имя: ')
+lastname=input('Введите вашу фамилию: ')
+age=int(input('Введите ваш возраст: '))
+weight=int(input('Введите ваш вес: '))
+print("Привет, ", name, lastname, age, " лет,", "ваш вес: ", weight)
+
+# задание 2 Пользователь вводит время в секундах. Переведите время в часы, минуты и секунды и выведите в формате чч:мм:сс. Используйте форматирование строк.
+time = int(input("Введите время в секундах: "))
+hour = int(time//3600)
+minute = int(time//60)
+sec = int((time % 3600) % 60)
+if time % 3600 >= 1:
+    minute = time % 3600//60
+else:
+    minute = 0
+    sec = time % 3600
+
+print(hour, ':', minute, ':', sec)
+
+# задание 3
+number = input('Введите число: ')
+result1 = int(number + number)
+result2 = int(number + number + number)
+print (int(number) + result1 + result2)
+
+# задание 5
+
+profit = int(input('Введите доход фирмы: '))
+cost = int(input('Введите издержки фирмы: '))
+result = int(profit - cost)
+if result > 0:
+    print('Ваша фирма процветает, босс')
+elif profit == cost:
+    print ('Пока работаете без прибыли')
+else:
+    print('Не лучшие времена, милорд')
+
+if result > 0:
+    rent = int(result/profit)
+    number = int(input('Введите количество сотрудников: '))
+    result2 = int (result / number)
+    print('На одного сотрудника приходится', result2, 'рублей выручки')
